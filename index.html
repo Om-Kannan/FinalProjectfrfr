@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatPrompt Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ChatPrompt Generator</h1>
+        <p class="subtitle">Create better prompts for more effective AI conversations</p>
+    </header>
+    
+    <div class="container">
+        <div class="form-container" id="promptForm">
+            <h2>Design Your Prompt</h2>
+            
+            <div class="form-group">
+                <label for="goal">What do you want ChatGPT to do?</label>
+                <textarea id="goal" placeholder="e.g., Write a story about space exploration, Explain quantum physics, Create a marketing plan..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="format">Preferred Output Format</label>
+                <select id="format">
+                    <option value="paragraph">Paragraph</option>
+                    <option value="bullet-list">Bullet Points</option>
+                    <option value="numbered-list">Numbered List</option>
+                    <option value="table">Table</option>
+                    <option value="code">Code</option>
+                    <option value="tweet">Tweet-sized</option>
+                    <option value="essay">Essay</option>
+                    <option value="conversation">Conversation</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tone">Tone</label>
+                <select id="tone">
+                    <option value="neutral">Neutral</option>
+                    <option value="formal">Formal</option>
+                    <option value="casual">Casual</option>
+                    <option value="friendly">Friendly</option>
+                    <option value="humorous">Humorous</option>
+                    <option value="professional">Professional</option>
+                    <option value="authoritative">Authoritative</option>
+                    <option value="empathetic">Empathetic</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="style">Writing Style</label>
+                <select id="style">
+                    <option value="balanced">Balanced</option>
+                    <option value="concise">Concise</option>
+                    <option value="detailed">Detailed</option>
+                    <option value="step-by-step">Step-by-Step</option>
+                    <option value="technical">Technical</option>
+                    <option value="simple">Simple</option>
+                    <option value="creative">Creative</option>
+                    <option value="academic">Academic</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="additional">Additional Notes or Requirements (Optional)</label>
+                <textarea id="additional" placeholder="e.g., Include specific examples, Focus on beginners, Use metaphors..."></textarea>
+            </div>
+            
+            <button id="generateBtn">Generate Prompt</button>
+        </div>
+        
+        <div class="result-container" id="resultContainer" style="display: none;">
+            <h2>Your Optimized Prompt</h2>
+            <div id="loadingSpinner" class="loading-spinner"></div>
+            <div id="generatedPrompt" class="prompt-box"></div>
+            <div class="button-group">
+                <button id="copyBtn">Copy to Clipboard</button>
+                <button id="newPromptBtn">Create New Prompt</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>ChatPrompt Generator helps you craft better prompts for AI conversations.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
